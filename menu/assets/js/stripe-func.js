@@ -13,7 +13,7 @@ function confirmGuestOrder(event) {
         var shippingPrice = $('.transfer').text();
         shippingPrice = shippingPrice.replace('$', '');
         var totalAmt = $('#totalOrderSummary').val();
-        totalAmt = totalAmt.replace('$', '');
+        totalAmt = totalAmt.replace('¥', '');
         $('#itemList li').each(function (index) {
             var imagePath = $(this).find('.order-list-img img').attr('src');
             var title = $(this).find('.order-list-details h4').html();

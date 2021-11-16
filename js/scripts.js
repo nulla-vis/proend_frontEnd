@@ -97,7 +97,7 @@
 		// Prevent moving forward if total is zero
 		beforeForward: function (event, state) {
 
-			if ($('.total').val() == '$ 0.00') {
+			if ($('.total').val() == '¥ 0.00') {
 				validateTotal();
 				return false; // prevent moving forward
 			}
@@ -302,10 +302,10 @@
 	// Add custom empty order validation
 	window.Parsley.addValidator('emptyOrder', {
 		validateString: function (value) {
-			return value !== '$ 0.00';
+			return value !== '¥ 0.00';
 		},
 		messages: {
-			en: 'Order is empty.'
+			en: '注文は空です。'
 		}
 	});
 
@@ -418,6 +418,7 @@
 	var actualQty = 0;
 	var maxQty = 10;
 	var subSum = 0;
+	var deliveryFee = 10;
 	var total = 0;
 
 	// Function to set empty cart image
@@ -427,7 +428,7 @@
 		$('#itemList').append('<li id="emptyCart"></li>');
 
 		// Fill the dedicated row
-		$('#emptyCart').html('<div class="order-list-img"><img src="../img/bg/empty-plate.png" alt="Your cart is empty"/></div><div class="order-list-details"> <h4>ご注文は空です</a><br/><small>注文しましょう</small></h4> <div class="order-list-price format-price">0.00</div></div>');
+		$('#emptyCart').html('<div class="order-list-img"><img src="../img/bg/empty-cart-small.jpg" alt="Your cart is empty"/></div><div class="order-list-details"> <h4>Your cart is empty</a><br/><small>Start adding items</small></h4> <div class="order-list-price format-price">0.00</div></div>');
 		formatPrice();
 	}
 
@@ -460,6 +461,8 @@
 			total += ($(this).text().match(/[0-9.]+/g) * 1);
 
 		});
+		//Add delivery fee
+		total = total + (deliveryFee * 1);
 
 		// Set total
 		$('.total').val(total.toFixed(2));
