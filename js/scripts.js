@@ -366,7 +366,7 @@
 
 			// Show added to cart message
 			$('.addedToCartMsg').fadeIn('slow', function () {
-				$('.addedToCartMsg').fadeOut();
+				$('.addedToCartMsg').delay(2000).fadeOut();
 			});
 
 		} else if ($.magnificPopup.instance.isOpen) { // Only show this message when a popup is opened
@@ -384,7 +384,7 @@
 
 			// Show already in cart message
 			$('.alreadyInCartMsg').fadeIn('slow', function () {
-				$('.alreadyInCartMsg').fadeOut();
+				$('.alreadyInCartMsg').delay(2000).fadeOut();
 			});
 
 		} else if ($.magnificPopup.instance.isOpen) { // Only show this
