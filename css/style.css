@@ -54,7 +54,7 @@ Author URL: https://themeforest.net/user/ultimatewebsolutions/
 	-moz-animation: circle infinite .95s linear;
 	-o-animation: circle infinite .95s linear;
 	animation: circle infinite .95s linear;
-	border: 2px solid #f25c04;
+	border: 2px solid #ed1b24;
 	border-top-color: rgba(0, 0, 0, 0.2);
 	border-right-color: rgba(0, 0, 0, 0.2);
 	border-bottom-color: rgba(0, 0, 0, 0.2);
@@ -154,7 +154,7 @@ html ::-webkit-scrollbar-track-piece {
 }
 
 html ::-webkit-scrollbar-thumb {
-	background-color: #f25c04;
+	background-color: #ed1b24;
 	border-radius: none;
 }
 
@@ -165,8 +165,9 @@ html ::-webkit-scrollbar-corner {
 body {
 	background: #f8f8f8;
 	font-size: 14px;
-	font-family: 'Yuji Syuku', serif;
+	/* font-family: 'Yuji Syuku', serif; */
 	color: #555;
+	font-family:'Hachi Maru Pop', serif;
 }
 
 main {
@@ -194,7 +195,7 @@ p {
 }
 
 a {
-	color: #f25c04;
+	color: #ed1b24;
 	text-decoration: none;
 	-moz-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
@@ -256,10 +257,10 @@ button:focus {
 ==================================== */
 
 .btn-modal {
-	border: 2px solid #f25c04;
+	border: 2px solid #ed1b24;
 	font-family: inherit;
 	color: #fff;
-	background: #f25c04;
+	background: #ed1b24;
 	cursor: pointer;
 	padding: 7px 15px;
 	display: inline-block;
@@ -300,8 +301,8 @@ button:focus {
 }
 
 .btn-modal-close:hover {
-	border: 2px solid #f25c04;
-	color: #f25c04;
+	border: 2px solid #ed1b24;
+	color: #ed1b24;
 }
 
 .modal-header .close {
@@ -309,7 +310,7 @@ button:focus {
 }
 
 .alert-text-strong {
-	color: #f25c04;
+	color: #ed1b24;
 	font-weight: 700;
 }
 
@@ -610,19 +611,19 @@ header.static {
 /* Header Menu Color */
 
 .main-menu>ul>li span:hover>a {
-	color: #f25c04;
+	color: #ed1b24;
 }
 
 .main-menu ul ul {
-	border-top: 2px solid #f25c04;
+	border-top: 2px solid #ed1b24;
 }
 
 .main-menu ul ul li:hover>a {
-	color: #f25c04;
+	color: #ed1b24;
 }
 
 .main-menu ul ul li span>a:hover {
-	color: #f25c04;
+	color: #ed1b24;
 }
 
 /* Header Menu Chevron Down */
@@ -664,7 +665,7 @@ ul#menuIcons li i {
 }
 
 ul#menuIcons li a {
-	color: #f25c04;
+	color: #ed1b24;
 }
 
 ul#menuIcons li a:hover {
@@ -677,6 +678,7 @@ ul#menuIcons li a:hover {
 	margin: 0;
 	padding: 0;
 	line-height: 1;
+	
 }
 
 #logo h1 a {
@@ -732,8 +734,8 @@ ul#menuIcons li a:hover {
 
 .sticky-nav a.list-group-item.active {
 	color: #fff;
-	background-color: #f25c04;
-	border-color: #f25c04;
+	background-color: #ed1b24;
+	border-color: #ed1b24;
 }
 
 .sticky-nav a:before {
@@ -743,12 +745,12 @@ ul#menuIcons li a:hover {
 	left: 0;
 	width: 0;
 	height: 2px;
-	background-color: #f25c04;
+	background-color: #ed1b24;
 }
 
 .sticky-nav a.active, .sticky-nav a:hover {
-	color: #f25c04;
-	border-color: #f25c04;
+	color: #ed1b24;
+	border-color: #ed1b24;
 }
 
 .sticky-nav a i {
@@ -774,6 +776,7 @@ ul#menuIcons li a:hover {
 }
 
 .sub-header h1 {
+	
 	color: #fff;
 	margin: 0;
 	font-size: 18px;
@@ -816,7 +819,7 @@ a.footer-link {
 }
 
 .contact-links i {
-	color: #f25c04;
+	color: #ed1b24;
 	margin-right: 10px;
 	font-size: 18px;
 	vertical-align: middle;
@@ -886,7 +889,7 @@ ul#subFooterLinks li:after {
 }
 
 ul#subFooterLinks i {
-	color: #f25c04;
+	color: #ed1b24;
 }
 
 /* Sub Footer Links */
@@ -926,7 +929,7 @@ ul#subFooterLinks li:after {
 }
 
 ul#subFooterLinks i {
-	color: #f25c04;
+	color: #ed1b24;
 }
 
 /* Hero
@@ -939,7 +942,7 @@ ul#subFooterLinks i {
 }
 
 .hero-home.bg-mockup {
-	background: #f25c04 url(../img/bg/bg.svg) no-repeat center bottom;
+	background: #ed1b24 url(../img/bg/bg.svg) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -972,14 +975,13 @@ ul#subFooterLinks i {
 	margin: 0;
 	font-size: 60px;
 	font-weight: 700;
-	text-transform: uppercase;
 	color: #fff;
 }
 
 .main-title h2 {
 	font-size: 26px;
 	margin: 30px 0 0 0;
-	font-family: 'Yuji Syuku', serif;
+	font-family:'Hachi Pop Maru', serif;
 }
 
 .main-title p {
@@ -997,7 +999,7 @@ ul#subFooterLinks i {
 .main-title span em {
 	width: 60px;
 	height: 2px;
-	background-color: #f25c04;
+	background-color: #ed1b24;
 	display: block;
 	margin-top: 30px;
 }
@@ -1005,7 +1007,7 @@ ul#subFooterLinks i {
 .order .main-title span em {
 	width: 60px;
 	height: 2px;
-	background-color: #f25c04;
+	background-color: #ed1b24;
 	display: block;
 	margin-top: 0;
 }
@@ -1013,13 +1015,14 @@ ul#subFooterLinks i {
 .order .main-title h2 {
 	font-size: 26px;
 	margin: 0 0 30px 0;
+	font-family:'Hachi Maru Pop', serif;
 }
 
 /* Hero Buttons */
 
 a.btn-1, .btn-1 {
 	border: none;
-	color: #f25c04;
+	color: #ed1b24;
 	background: #fff;
 	cursor: pointer;
 	padding: 7px 20px;
@@ -1041,7 +1044,7 @@ a.btn-1, .btn-1 {
 }
 
 a.btn-1:hover, .btn-1:hover {
-	background-color: #f25c04;
+	background-color: #ed1b24;
 	color: #fff;
 }
 
@@ -1053,7 +1056,7 @@ a.btn-1.medium, .btn-1.medium {
 a.btn-2, .btn-2 {
 	border: none;
 	color: #fff;
-	background: #f25c04;
+	background: #ed1b24;
 	cursor: pointer;
 	padding: 7px 20px;
 	display: inline-block;
@@ -1102,7 +1105,7 @@ a.btn-2:hover, .btn-2:hover {
 	position: relative;
 	height: 35px;
 	width: 25px;
-	border: solid 2px #f25c04;
+	border: solid 2px #ed1b24;
 	border-radius: 20px;
 }
 
@@ -1111,7 +1114,7 @@ a.btn-2:hover, .btn-2:hover {
 	height: 3px;
 	width: 3px;
 	border-radius: 50%;
-	background-color: #f25c04;
+	background-color: #ed1b24;
 	position: absolute;
 	top: 7px;
 	left: 11px;
@@ -1171,7 +1174,7 @@ a.btn-2:hover, .btn-2:hover {
 }
 
 .hero-order.bg-img {
-	background: #f25c04 url(../img/bg/bg.jpg) no-repeat center bottom;
+	background: #ed1b24 url(../img/bg/bg.jpg) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -1209,7 +1212,7 @@ a.btn-2:hover, .btn-2:hover {
 	top: -30px;
 	width: 50px;
 	height: 3px;
-	background-color: #f25c04;
+	background-color: #ed1b24;
 }
 
 /* Contact Links*/
@@ -1225,7 +1228,7 @@ a.btn-2:hover, .btn-2:hover {
 }
 
 .hero-order .contact-info a i {
-	color: #f25c04;
+	color: #ed1b24;
 	margin-right: 5px;
 }
 
@@ -1261,7 +1264,7 @@ a.btn-2:hover, .btn-2:hover {
 }
 
 .hero-order .score strong {
-	background-color: #f25c04;
+	background-color: #ed1b24;
 	-webkit-border-radius: 5px 0 5px 5px;
 	-moz-border-radius: 5px 0 5px 5px;
 	-ms-border-radius: 5px 0 5px 5px;
@@ -1316,7 +1319,7 @@ a.btn-2:hover, .btn-2:hover {
 	margin: 0 auto;
 	margin-bottom: 1rem;
 	font-size: 3.5rem;
-	color: #f25c04;
+	color: #ed1b24;
 }
 
 .box p {
@@ -1343,13 +1346,13 @@ a.btn-2:hover, .btn-2:hover {
 .border-multiple>span.first {
 	width: 6px;
 	height: 3px;
-	background-color: #f25c04;
+	background-color: #ed1b24;
 }
 
 .border-multiple>span.second, .border-multiple>span.third {
 	width: 25px;
 	height: 3px;
-	background-color: #f25c04;
+	background-color: #ed1b24;
 }
 
 /* Banner
@@ -1360,7 +1363,7 @@ a.btn-2:hover, .btn-2:hover {
 }
 
 .banner .content {
-	background: url(../img/bg/bg-banner.jpg) no-repeat center center;
+	background: url(../img/banner.png) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -1375,27 +1378,27 @@ a.btn-2:hover, .btn-2:hover {
 	position: relative;
 }
 
-.banner .content h2 {
+/* .banner .content h2 {
 	color: #fff;
 	font-size: 26px;
 	margin: 0;
 	margin-top: 10px;
-}
-
+} */
+/* 
 .banner .textbox {
 	padding: 90px;
 	height: 100%;
-}
+} */
 
-.banner .content small {
+/* .banner .content small {
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: 500;
 	margin: 0;
-}
+} */
 
-.banner .content p {
+/* .banner .content p {
 	color: #fff;
 	font-size: 21px;
 	margin: 0;
@@ -1406,7 +1409,7 @@ a.btn-2:hover, .btn-2:hover {
 	background-color: rgba(0, 0, 0, 0.3);
 	width: 100%;
 	height: 100%;
-}
+} */
 
 /* Faq
 ==================================== */
@@ -1460,7 +1463,7 @@ a.btn-2:hover, .btn-2:hover {
 	font-size: 1.125rem;
 	font-weight: normal;
 	float: right;
-	color: #f25c04;
+	color: #ed1b24;
 }
 
 .card {
@@ -1575,7 +1578,7 @@ a.btn-2:hover, .btn-2:hover {
 
 #markerInfo a {
 	font-size: 13px;
-	color: #f25c04;
+	color: #ed1b24;
 }
 
 #markerInfo a:hover {
@@ -1585,7 +1588,7 @@ a.btn-2:hover, .btn-2:hover {
 #markerInfo span strong {
 	display: block;
 	font-weight: 500;
-	color: #f25c04;
+	color: #ed1b24;
 	margin: 10px 0;
 }
 
@@ -1605,7 +1608,7 @@ a.btn-2:hover, .btn-2:hover {
 }
 
 #infoboxPhone {
-	color: #f25c04;
+	color: #ed1b24;
 	font-weight: 500;
 }
 
@@ -1669,7 +1672,7 @@ a.btn-2:hover, .btn-2:hover {
 }
 
 .filter-box-link, .filter-box-link:focus, .filter-box-link:active, .filter-box-link:visited {
-	color: #f25c04;
+	color: #ed1b24;
 	font-size: 11px;
 	font-weight: 500;
 	background: #fff;
@@ -1680,12 +1683,12 @@ a.btn-2:hover, .btn-2:hover {
 }
 
 .filter-box-link:hover {
-	color: #f25c04;
+	color: #ed1b24;
 	text-decoration: underline;
 }
 
 .price-box-desc {
-	color: #f25c04;
+	color: #ed1b24;
 	font-size: 11px;
 	font-weight: 500;
 	background: #fff;
@@ -1757,13 +1760,13 @@ a.btn-2:hover, .btn-2:hover {
 	bottom: 0;
 	height: 23px;
 	font-weight: 600;
-	color: #f25c04;
+	color: #ed1b24;
 	font-size: 20px;
 	margin-bottom: 10px;
 }
 
 .order-list-delete a, .order-list-delete a:hover, .order-list-delete a:focus, .order-list-delete a:visited {
-	color: #f25c04;
+	color: #ed1b24;
 	outline: none;
 }
 
@@ -1959,7 +1962,7 @@ input.qtyminus {
 }
 
 .item-body ul li a:hover {
-	color: #f25c04;
+	color: #ed1b24;
 }
 
 .item-body ul li i {
@@ -2002,7 +2005,7 @@ input.qtyminus {
 /* Ribbon Size */
 
 .ribbon-size {
-	background-color: #f25c04;
+	background-color: #ed1b24;
 	color: #fff;
 	display: inline-block;
 	position: absolute;
@@ -2043,7 +2046,7 @@ input.form-control, select.form-control, textarea.form-control {
 
 input.form-control:focus, textarea.form-control:focus {
 	background: transparent;
-	border-color: #f25c04;
+	border-color: #ed1b24;
 	outline: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
@@ -2067,11 +2070,11 @@ input.form-control:disabled {
 }
 
 .search-wrap input[type='text']:hover {
-	border-color: #f25c04;
+	border-color: #ed1b24;
 }
 
 .search-wrap input[type='text']:active, .search-wrap input[type='text']:focus {
-	border-color: #f25c04;
+	border-color: #ed1b24;
 }
 
 .search-wrap input[type='text'] {
@@ -2119,7 +2122,7 @@ input.form-control:disabled {
 }
 
 .radio-wrapper input:checked~.checkmark {
-	border: 1px solid #f25c04;
+	border: 1px solid #ed1b24;
 }
 
 .radio-wrapper input:checked~.checkmark:after {
@@ -2156,11 +2159,11 @@ input.form-control:disabled {
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
-	background: #f25c04;
+	background: #ed1b24;
 }
 
 .radio-wrapper:hover .checkmark {
-	border: 1px solid #f25c04;
+	border: 1px solid #ed1b24;
 }
 
 /* Radio in Order Summary */
@@ -2207,7 +2210,7 @@ input.form-control:disabled {
 	transform: rotate( 45deg);
 	width: 100px;
 	display: block;
-	background: #f25c04;
+	background: #ed1b24;
 	-webkit-box-shadow: 0 6px 10px -5px #000;
 	-moz-box-shadow: 0 6px 10px -5px #000;
 	box-shadow: 0 6px 10px -5px #000;
@@ -2225,8 +2228,8 @@ input.form-control:disabled {
 	right: 30px;
 	padding: 7px 8px 3px;
 	background-color: #fff;
-	color: #f25c04;
-	border: 1px solid #f25c04;
+	color: #ed1b24;
+	border: 1px solid #ed1b24;
 	z-index: 1;
 	font-size: 18px;
 	font-weight: 300;
@@ -2272,11 +2275,11 @@ input.form-control:disabled {
 }
 
 .nice-select:hover {
-	border-color: #f25c04;
+	border-color: #ed1b24;
 }
 
 .nice-select:active, .nice-select.open, .nice-select:focus {
-	border-color: #f25c04;
+	border-color: #ed1b24;
 }
 
 .nice-select:after {
@@ -2367,7 +2370,7 @@ input.form-control:disabled {
 
 .nice-select .list {
 	background-color: #fff;
-	border: 1px solid #f25c04;
+	border: 1px solid #ed1b24;
 	border-radius: 5px;
 	box-sizing: border-box;
 	opacity: 0;
@@ -2470,15 +2473,15 @@ input.form-control:disabled {
 
 .fl-form .fl-has-focus input.fl-input, .fl-form .fl-has-focus select.fl-select, .fl-form .fl-has-focus textarea.fl-textarea {
 	background-color: #fff;
-	border-color: #f25c04;
+	border-color: #ed1b24;
 }
 
 .fl-form .fl-has-focus label.fl-label {
-	color: #f25c04;
+	color: #ed1b24;
 }
 
 .fl-form .fl-is-required:before {
-	color: #f25c04;
+	color: #ed1b24;
 	padding: 10px 0 0;
 }
 
@@ -2490,9 +2493,9 @@ input.form-control:disabled {
 /* Form Buttons */
 
 .btn-form-func {
-	background: #f25c04;
+	background: #ed1b24;
 	border-radius: 5px;
-	border: 2px solid #f25c04;
+	border: 2px solid #ed1b24;
 	color: #fff;
 	display: inline-block;
 	overflow: hidden;
@@ -2571,7 +2574,7 @@ input.form-control:disabled {
 }
 
 .btn-form-func.btn-form-func-alt-color .icon {
-	border-left-color: #f25c04;
+	border-left-color: #ed1b24;
 }
 
 .btn-form-func.btn-form-func-alt-color:after {
@@ -2650,7 +2653,7 @@ label.cbx {
 	content: "";
 	width: 100%;
 	height: 100%;
-	background: #f25c04;
+	background: #ed1b24;
 	display: block;
 	transform: scale(0);
 	opacity: 1;
@@ -2658,7 +2661,7 @@ label.cbx {
 }
 
 .cbx:hover span:first-child {
-	border-color: #f25c04;
+	border-color: #ed1b24;
 }
 
 .inp-cbx {
@@ -2666,8 +2669,8 @@ label.cbx {
 }
 
 .inp-cbx:checked+.cbx span:first-child {
-	background: #f25c04;
-	border-color: #f25c04;
+	background: #ed1b24;
+	border-color: #ed1b24;
 	animation: wave 0.4s ease;
 }
 
@@ -2691,13 +2694,13 @@ label.cbx {
 
 .terms-link, .modify-order, .terms-link:visited, .modify-order:visited {
 	text-decoration: none;
-	color: #f25c04;
+	color: #ed1b24;
 	margin-left: 5px;
 	transition: none;
 }
 
 .terms-link:hover, .modify-order:hover {
-	color: #f25c04;
+	color: #ed1b24;
 	text-decoration: underline;
 }
 
@@ -2717,8 +2720,8 @@ label.cbx {
 .parsley-errors-list {
 	font-size: 10px !important;
 	text-transform: uppercase;
-	border: 1px solid #f25c04;
-	background-color: #f25c04;
+	border: 1px solid #ed1b24;
+	background-color: #ed1b24;
 	color: #fff;
 	padding: 2px 0 0 3px !important;
 	margin: 10px 0 10px 0 !important;
@@ -2736,7 +2739,7 @@ label.cbx {
 	margin-top: -9px;
 	pointer-events: none;
 	position: absolute;
-	border-bottom: solid 6px #f25c04;
+	border-bottom: solid 6px #ed1b24;
 	border-left: solid 6px transparent;
 	border-right: solid 6px transparent;
 }
@@ -2792,7 +2795,7 @@ label.cbx {
 }
 
 #orderSumList li i {
-	color: #f25c04;
+	color: #ed1b24;
 }
 
 #orderContainer ul li span.price, .price {
@@ -2881,7 +2884,7 @@ label.cbx {
 #toTop {
 	width: 40px;
 	height: 40px;
-	background-color: #f25c04;
+	background-color: #ed1b24;
 	text-align: center;
 	padding: 10px;
 	line-height: 20px;
