@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUSHER!</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+
+    <script  src="onlyflappybird.js" type="module"></script>
+    
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h4>CRUSHER</h4>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/welcome">Home</a>
+            </li>
+            <li>
+                <a href="/games">Games</a>
+            </li>
+            <li>
+                <a href="/about">About</a>
+            </li>
+            <li>
+                <form action="/logout?_method=DELETE" method="POST" class="logout">
+                <input type="submit" value="Logout">
+                </form>
+            </li>
+        </ul>
+
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+    </nav>
+    <div id="particles">
+        <div id="intro">
+            <!-- game code -->
+            <canvas id="c"></canvas>
+        </div>
+    </div>
+</body>
+</html>
