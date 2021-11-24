@@ -99,7 +99,6 @@
 		// Prevent moving forward if total is zero
 		beforeForward: function (event, state) {
 
-			console.log('asdsa')
 			if ($('.total').val() == '0') {
 				validateTotal();
 				return false; // prevent moving forward
@@ -485,7 +484,7 @@
 		$('#itemList').append('<li id="cartItem' + id + rowId + '"></li>');
 
 		// Insert item into its dedicated row in the cart
-		$('#cartItem' + id + rowId).html('<div class="order-list-img"><img src="' + thumbnailPath + '" alt=""></div><div class="order-list-details"><h4>' + itemTitle + '<br/> <small>' + itemSubtitle + extraTitle + '</small> </h4> <div class="qty-buttons"> <input type="button" value="+" class="qtyplus" name="plus"> <input type="text" name="qty" value="1" class="qty form-control"> <input type="button" value="-" class="qtyminus" name="minus"> </div><div class="order-list-price format-price"> ¥' + itemPrice + '</div><div class="order-list-delete"><a href="javascript:;" id="deleteCartItem' + id + rowId + '"><i class="icon icon-trash"></i></a></div></div>');
+		$('#cartItem' + id + rowId).html('<div class="order-list-img"><img src="' + thumbnailPath + '" alt=""></div><div class="order-list-details"><h4>' + itemTitle + '<br/> <small>' + itemSubtitle + extraTitle + '</small> </h4> <div class="qty-buttons"> <input type="button" value="+" class="qtyplus" name="plus"> <input type="text" name="qty" id="qty" value="1" class="qty form-control"> <input type="button" value="-" class="qtyminus" name="minus"> </div><div class="order-list-price format-price"> ¥' + itemPrice + '</div><div class="order-list-delete"><a href="javascript:;" id="deleteCartItem' + id + rowId + '"><i class="icon icon-trash"></i></a></div></div>');
 
 		// Handle if an added item will be deleted
 		$('#deleteCartItem' + id + rowId).on('click', function () {
@@ -796,7 +795,6 @@
 	$(document).on('click', '.add-item-to-cart', function(){
 
 		id = $(this).parent().parent().parent().parent().attr('id').match(/\d+/);
-		console.log('jalan jalan')
 		addItemToCart(id);
 		validateTotal();
 
