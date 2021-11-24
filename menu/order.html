@@ -124,7 +124,7 @@
                             <!-- Order Container -->
                             <div id="orderContainer" class="theiaStickySidebar">
                                 <!-- Form -->
-                                <form id="orderForm" action="http://127.0.0.1:5500/index.html">
+                                <form id="orderForm">
                                 <!-- <form method="" id="orderForm" name="orderForm" onsubmit="return confirmGuestOrder(event);"> -->
 
                                     <!-- Step 1: Order Summary -->
@@ -156,7 +156,7 @@
                                             <!-- Forward Button -->
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <button type="button" name="forward" class="btn-form-func forward">
+                                                    <button type="button" name="forward" class="btn-form-func forward" onclick="run1()">
                                                         <span class="btn-form-func-content">注文を続ける</span>
                                                         <span class="icon"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
                                                     </button>
@@ -172,7 +172,7 @@
                                         <div class="order-header">
                                             <h3>注文の概要 2/2</h3>
                                         </div>
-                                        <div id="personalData" data-consumer-key='<?php echo Config::STRIPE_PUBLISHABLE_KEY; ?>' data-create-order-url='<?php echo Config::STRIPE_CREATE_ORDER_URL; ?>' data-return-url='<?php echo Config::THANKYOU_URL; ?>' data-currency='<?php echo Config::CURRENCY; ?>'>
+                                        <div id="personalData">
                                             <div class="order-body">
                                                 <div class="row">
                                                     <div class="col-md-12">
@@ -197,7 +197,7 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col pl-0">
-                                                        <a href="javascript:;" class="modify-order backward">Modify Order</a>
+                                                        <a href="javascript:;" class="modify-order backward">注文を変更する</a>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -361,6 +361,7 @@
     <script src="../vendor/sticky-kit/js/sticky-kit.min.js"></script>
     
     <!-- Main Javascript File -->
+    <script src="assets/js/menuList.js"></script>
     <script src="assets/js/order.js"></script>
     <script src="../js/scripts.js"></script>
     
