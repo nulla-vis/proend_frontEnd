@@ -5,6 +5,7 @@
 	// =====================================================
 	// PRELOADER
 	// =====================================================
+
 	$(window).on("load", function () {
 		'use strict';
 		$('[data-loader="circle-side"]').fadeOut();
@@ -15,6 +16,7 @@
 		$hero.find('.btn-1').addClass('fadeIn animated');
 		$hero_v.find('.h3, p, form').addClass('fadeInUp animated');
 		$(window).scroll();
+		
 	})
 
 	// =====================================================
@@ -97,7 +99,8 @@
 		// Prevent moving forward if total is zero
 		beforeForward: function (event, state) {
 
-			if ($('.total').val() == '¥ 0.00') {
+			console.log('asdsa')
+			if ($('.total').val() == '0') {
 				validateTotal();
 				return false; // prevent moving forward
 			}
@@ -302,7 +305,7 @@
 	// Add custom empty order validation
 	window.Parsley.addValidator('emptyOrder', {
 		validateString: function (value) {
-			return value !== '¥ 0.00';
+			return value !== '0';
 		},
 		messages: {
 			en: '注文は空です。'
@@ -323,9 +326,7 @@
 	// Function to format item prices usign priceFormat plugin
 	function formatPrice() {
 		$('.format-price').priceFormat({
-			prefix: '¥ ',
-			centsSeparator: '.',
-			thousandsSeparator: ','
+			prefix: '¥ '
 		});
 	}
 
@@ -333,8 +334,8 @@
 	function resetTotal() {
 
 		$('.totalTitle').val('Total');
-		$('.total').val('0.00');
-		formatPrice();
+		$('.total').val('0');
+		// formatPrice();
 
 	}
 
@@ -411,7 +412,7 @@
 	var itemTitle = '';
 	var description = '';
 	var itemPrice = '';
-	var extraTitle = '';
+	var extraTitle = '1';
 	var extraPrice = '';
 	var extraIsChecked = false;
 	var qtyInput = 0;
@@ -428,8 +429,8 @@
 		$('#itemList').append('<li id="emptyCart"></li>');
 
 		// Fill the dedicated row
-		$('#emptyCart').html('<div class="order-list-img"><img src="../img/bg/empty-plate.png" alt="Your cart is empty"/></div><div class="order-list-details"> <h4>ご注文は空です</a><br/><small>注文しましょう</small></h4> <div class="order-list-price format-price">0.00</div></div>');
-		formatPrice();
+		$('#emptyCart').html('<div class="order-list-img"><img src="../img/bg/empty-plate.png" alt="Your cart is empty"/></div><div class="order-list-details"> <h4>ご注文は空です</a><br/><small>注文しましょう</small></h4> <div class="order-list-price format-price">¥0</div></div>');
+		// formatPrice();
 	}
 
 	// Function to check if the cart is empty
@@ -447,7 +448,7 @@
 		subSum = (itemPrice * 1) * (actualQty * 1);
 
 		// Update subSum
-		$('#cartItem' + id + rowId + ' .order-list-details .order-list-price').text(subSum.toFixed(2));
+		$('#cartItem' + id + rowId + ' .order-list-details .order-list-price').text(subSum);
 	}
 
 	// Function to update total summary
@@ -463,17 +464,17 @@
 		});
 
 		// Set total
-		$('.total').val(total.toFixed(2));
-		$('.totalValue').text(total.toFixed(2));
+		$('.total').val(total);
+		$('.totalValue').text('¥'+total);
 
 		// If cart is empty do not calculate any cost
 		if ($('ul#itemList li#emptyCart').length > 0) {
 			total = 0;
-			$('.total').val(total.toFixed(2));
-			$('.totalValue').text(total.toFixed(2));
+			$('.total').val(total);
+			$('.totalValue').text(total);
 		}
 
-		formatPrice();
+		// formatPrice();
 
 	}
 
@@ -484,7 +485,7 @@
 		$('#itemList').append('<li id="cartItem' + id + rowId + '"></li>');
 
 		// Insert item into its dedicated row in the cart
-		$('#cartItem' + id + rowId).html('<div class="order-list-img"><img src="' + thumbnailPath + '" alt=""></div><div class="order-list-details"><h4>' + itemTitle + '<br/> <small>' + itemSubtitle + extraTitle + '</small> </h4> <div class="qty-buttons"> <input type="button" value="+" class="qtyplus" name="plus"> <input type="text" name="qty" value="1" class="qty form-control"> <input type="button" value="-" class="qtyminus" name="minus"> </div><div class="order-list-price format-price">' + itemPrice.toFixed(2) + '</div><div class="order-list-delete"><a href="javascript:;" id="deleteCartItem' + id + rowId + '"><i class="icon icon-trash"></i></a></div></div>');
+		$('#cartItem' + id + rowId).html('<div class="order-list-img"><img src="' + thumbnailPath + '" alt=""></div><div class="order-list-details"><h4>' + itemTitle + '<br/> <small>' + itemSubtitle + extraTitle + '</small> </h4> <div class="qty-buttons"> <input type="button" value="+" class="qtyplus" name="plus"> <input type="text" name="qty" value="1" class="qty form-control"> <input type="button" value="-" class="qtyminus" name="minus"> </div><div class="order-list-price format-price"> ¥' + itemPrice + '</div><div class="order-list-delete"><a href="javascript:;" id="deleteCartItem' + id + rowId + '"><i class="icon icon-trash"></i></a></div></div>');
 
 		// Handle if an added item will be deleted
 		$('#deleteCartItem' + id + rowId).on('click', function () {
@@ -635,7 +636,7 @@
 		extraTitle = $('#item' + id + 'ExtraTitle').val();
 		extraPrice = ($('#item' + id + 'Extra').val()) * 1; // Find digits, dot and convert to number
 
-		thumbnailPath = '../img/gallery/grid-items-small/' + id + '.jpg';
+		thumbnailPath = $('.item-body img').attr('src');
 
 		// Capture row where the item will be inserted
 		if (size == 'Small: 26cm') {
@@ -654,6 +655,7 @@
 				} else { // If not: put it into the cart
 
 					insertItemIntoCartRow(id, rowId, size, thumbnailPath, itemTitle, extraTitle, itemPrice);
+					console.log('masuk1')
 
 				}
 
@@ -671,6 +673,7 @@
 				} else { // If not: put it into the cart
 
 					insertItemIntoCartRow(id, rowId, size, thumbnailPath, itemTitle, extraTitle, itemPrice);
+					console.log('masuk2')
 				}
 			}
 		}
@@ -690,6 +693,7 @@
 				} else { // If not: put it into the cart
 
 					insertItemIntoCartRow(id, rowId, size, thumbnailPath, itemTitle, extraTitle, itemPrice);
+					console.log('masuk3')
 				}
 
 			} else if (extraIsChecked) { // If extra is checked
@@ -706,6 +710,7 @@
 				} else { // If not: put it into the cart
 
 					insertItemIntoCartRow(id, rowId, size, thumbnailPath, itemTitle, extraTitle, itemPrice);
+					console.log('masuk4')
 				}
 			}
 		}
@@ -725,6 +730,7 @@
 				} else { // If not: put it into the cart
 
 					insertItemIntoCartRow(id, rowId, size, thumbnailPath, itemTitle, extraTitle, itemPrice);
+					console.log('masuk5')
 				}
 
 			} else if (extraIsChecked) { // If extra is checked
@@ -741,6 +747,7 @@
 				} else { // If not: put it into the cart
 
 					insertItemIntoCartRow(id, rowId, size, thumbnailPath, itemTitle, extraTitle, itemPrice);
+					console.log('masuk6')
 				}
 			}
 		}
@@ -761,7 +768,7 @@
 		itemPrice = $('#gridItem' + id + ' .item-price').text();
 		itemPrice = (itemPrice.match(/[0-9.]+/g)) * 1; // Find digits, dot and convert to number
 
-		thumbnailPath = '../img/gallery/grid-items-small/' + id + '.jpg';
+		thumbnailPath = $('#gridItem' + id + ' .item-body img').attr('src');
 
 		// Check if item already exists in cart or not
 		if ($('#cartItem' + id + rowId).length > 0) {
@@ -785,9 +792,11 @@
 	});
 
 	// Pure item without options is added to cart
-	$('.add-item-to-cart').on('click', function () {
+
+	$(document).on('click', '.add-item-to-cart', function(){
 
 		id = $(this).parent().parent().parent().parent().attr('id').match(/\d+/);
+		console.log('jalan jalan')
 		addItemToCart(id);
 		validateTotal();
 
@@ -797,3 +806,4 @@
 	resetTotal();
 
 })(window.jQuery);
+
