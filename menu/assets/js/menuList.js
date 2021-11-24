@@ -22,7 +22,7 @@ const buildMenu = (menu_data) => {
     for(menu of menu_data.menus){
         if (menu.menu_type === 'foods') {
             all_foods +=`
-            <div id="gridItem1${menu.id}" class="col-xl-6 col-lg-6 col-md-6 col-sm-6 animated-element" data-sr-id="${menu.id}" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.6s cubic-bezier(0.5, 0, 0, 1) 0s;">
+            <div id="gridItem${menu.id}" class="col-xl-6 col-lg-6 col-md-6 col-sm-6 animated-element" data-sr-id="${menu.id}" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.6s cubic-bezier(0.5, 0, 0, 1) 0s;">
                 <div class="item-body">
                     <figure>
                         <img src="${menu.menu_image}" class="img-fluid" alt="">
@@ -48,7 +48,7 @@ const buildMenu = (menu_data) => {
 
         if (menu.menu_type === 'beverages') {
             all_beverages +=`
-            <div id="gridItem2${menu.id}" class="col-xl-6 col-lg-6 col-md-6 col-sm-6 animated-element" data-sr-id="${menu.id}" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.6s cubic-bezier(0.5, 0, 0, 1) 0s;">
+            <div id="gridItem${menu.id}" class="col-xl-6 col-lg-6 col-md-6 col-sm-6 animated-element" data-sr-id="${menu.id}" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.6s cubic-bezier(0.5, 0, 0, 1) 0s;">
                 <div class="item-body">
                     <figure>
                         <img src="${menu.menu_image}" class="img-fluid" alt="">
@@ -74,7 +74,7 @@ const buildMenu = (menu_data) => {
         
         if (menu.menu_type === 'desserts') {
             all_desserts +=`
-            <div id="gridItem3${menu.id}" class="col-xl-6 col-lg-6 col-md-6 col-sm-6 animated-element" data-sr-id="${menu.id}" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.6s cubic-bezier(0.5, 0, 0, 1) 0s;">
+            <div id="gridItem${menu.id}" class="col-xl-6 col-lg-6 col-md-6 col-sm-6 animated-element" data-sr-id="${menu.id}" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.6s cubic-bezier(0.5, 0, 0, 1) 0s;">
                 <div class="item-body">
                     <figure>
                         <img src="${menu.menu_image}" class="img-fluid" alt="">
