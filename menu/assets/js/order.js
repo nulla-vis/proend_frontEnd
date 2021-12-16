@@ -24,14 +24,25 @@ const run1 = () => {
     var json = JSON.stringify(object);
     json = json.replace(/\\/g, "")
     console.log(json)
+   
+    if(total != 0) {
+        fetch("http://localhost:3000/order/create/", {
+            method: "post",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: json
+        }).then(() => {
+            console.log('Data sent succesfully')
+            // socker.io
+            const socket = io("http://localhost:3000/");
+            // tell server that a new order has been placed
+            socket.emit('newOrder')
+        })
 
-    fetch("http://localhost:3000/order/create/", {
-        method: "post",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: json
-    }).then(() => {
-        console.log('Data sent succesfully')
-    })
+
+    }else {
+        console.log("cart is empty")
+    }
+
 }
