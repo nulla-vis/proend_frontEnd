@@ -7,7 +7,8 @@ const run1 = () => {
         try {
             id = order.id.match(/\d+/)[0]
             amount = order.getElementsByTagName('input')[1].value
-            menuData.push({"id": id, 'amount': amount})
+            table_number = document.getElementById('tableNumber').value
+            menuData.push({"id": id, 'amount': amount, 'table_number': parseInt(table_number)})
         } catch (error) {
             console.log("cart empty") 
         }
