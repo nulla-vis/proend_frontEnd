@@ -34,6 +34,9 @@
 
 	<!-- Main CSS -->
 	<link href="css/style.css" rel="stylesheet">
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
 
 </head>
 
@@ -85,6 +88,23 @@
 								</div>
 							</a>
 						</div>
+
+						<!-- show ongoing order -->
+						<div class="col-lg-12 animated-element" id="incomingOrder">	
+							<div class="box text-center" style="cursor: default;">
+								<div class="icon d-flex align-items-end"><i class="icon icon-list"></i></div>
+								<h3 class="service-title" style="font-family: 'Oswald', sans-serif;">注文</h3>
+								<p>ご注文の一覧</p>
+								<div class="row d-flex justify-content-center" id="incomingOrderList">
+									<div class="card" style="width: 18rem;">
+										<img src="/img/bg/empty-plate.png" class="card-img-top" alt="empty_cart" style="width: 100%; border: 1px solid rgba(0,0,0,.125); height: 160px">
+										<div class="card-body">
+										  <p class="card-text">ご注文は空です。注文をしましょう。</p>
+										</div>
+									  </div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -117,6 +137,8 @@
 	<!-- Vendor Javascript Files -->
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!-- custom javascript -->
+	<script src="js/index.js"></script>
 	<script src="vendor/easing/js/easing.min.js"></script>
 	<script src="vendor/parsley/js/parsley.min.js"></script>
 	<script src="vendor/nice-select/js/jquery.nice-select.min.js"></script>
@@ -135,6 +157,8 @@
 
 	<!-- Main Javascript File -->
 	<script src="js/scripts.js"></script>
+
+
 
 </body>
 
