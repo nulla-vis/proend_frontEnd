@@ -3,8 +3,9 @@ let order_card_element = document.getElementById('incomingOrder')
 
 const socket = io("http://localhost:3000/");
 socket.on('getAllOrder', function(data){
-    console.log(data.order)
-    buildOrderCard(data.order)
+    if(data.order){
+        buildOrderCard(data.order)
+    }
 }) 
 
 
@@ -16,14 +17,14 @@ const getAllIncomingOrder = () => {
     }).then((data) => {
         if(data.length > 0) {
             console.log(data)
-            // buildOrderCard(data)
+            buildOrderCard(data)
         }
     })
 }
 
 const buildOrderCard = (data) => {
     let all_order = ""
-    for(menu of data) {
+    data.forEach(menu => {
         all_order +=`
         <div class="card" style="width: 18rem; margin: 5px 15px;">
             <img src="${menu.menu_image}" class="card-img-top" alt="${menu.menu_title}" style="width: 100%; border: 1px solid rgba(0,0,0,.125); height: 160px">
@@ -32,7 +33,7 @@ const buildOrderCard = (data) => {
             </div>
         </div>
         `
-    }
+    })
 
     document.querySelector('#incomingOrderList').innerHTML = all_order
 }
