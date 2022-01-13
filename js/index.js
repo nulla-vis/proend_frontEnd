@@ -5,6 +5,8 @@ const socket = io("http://localhost:3000/");
 socket.on('getAllOrder', function(data){
     if(data.order){
         buildOrderCard(data.order)
+    } else {
+        defaultOrderCart()
     }
 }) 
 
@@ -18,6 +20,8 @@ const getAllIncomingOrder = () => {
         if(data.length > 0) {
             console.log(data)
             buildOrderCard(data)
+        } else {
+            defaultOrderCart()
         }
     })
 }
@@ -36,6 +40,17 @@ const buildOrderCard = (data) => {
     })
 
     document.querySelector('#incomingOrderList').innerHTML = all_order
+}
+const defaultOrderCart = () => {
+
+    document.querySelector('#incomingOrderList').innerHTML = `
+    <div class="card" style="width: 18rem;">
+        <img src="/img/bg/empty-plate.png" class="card-img-top" alt="empty_cart" style="width: 100%; border: 1px solid rgba(0,0,0,.125); height: 160px">
+        <div class="card-body">
+            <p class="card-text">ご注文は空です。注文をしましょう。</p>
+        </div>
+    </div>
+    `
 }
 
 const setStatus = (orderStatus) => {
@@ -72,6 +87,8 @@ const updateStatus = () => {
     }).then((data) => {
         if(data.length > 0) {
             statusUpdate(data)
+        } else if(data.message) {
+            defaultOrderCart()
         }
     })
 }
