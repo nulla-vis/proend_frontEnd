@@ -1,33 +1,33 @@
 @font-face {
     font-family: "Creepy";
-    src: url("Assets/Fonts/Creepy.woff") format("woff"),
-         url("Assets/Fonts/Creepy.woff2") format("woff2");
+    src: url("../Fonts/Creepy.woff") format("woff"),
+         url("../Fonts/Creepy.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Lunacy";
-    src: url("Assets/Fonts/Lunacy.woff") format("woff"),
-         url("Assets/Fonts/Lunacy.woff2") format("woff2");
+    src: url("../Fonts/Lunacy.woff") format("woff"),
+         url("../Fonts/Lunacy.woff2") format("woff2");
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
+.games-1 {
   min-height: 100vh;
-  cursor: url(Assets/Cursors/Ghost.cur), auto;
-  font-family: Lunacy;
+  cursor: url(../Cursors/Ghost.cur), auto;
+  font-family: 'Yuji Syuku', serif;
 }
 
-body {
+.games-1 {
   margin: 0;
   background: radial-gradient(#9D5900, #3D2200);
 }
 
 .page-title {
   color: #FF6D00;
-  font-family: Creepy, serif;
+  font-family: 'Yuji Syuku', serif;
   font-weight: normal;
   text-align: center;
   font-size: 6em;
@@ -41,7 +41,7 @@ body {
 
 .game-info {
   color: #FFBB89;
-  font-size: 4em;
+  font-size: 2.5em;
 }
 
 .game-container {
@@ -55,7 +55,7 @@ body {
 
 .card {
   position: relative;
-  cursor: url("Assets/Cursors/GhostHover.cur"), auto;
+  cursor: url("../Cursors/GhostHover.cur"), auto;
   height: 175px;
   width: 125px;
 }
@@ -166,6 +166,7 @@ body {
   align-items: center;
   flex-direction: column;
   color: #FF6D00;
+  font-family: 'Yuji Syuku', serif;
   transition: background-color 500ms, font-size 500ms;
 }
 
