@@ -1,4 +1,6 @@
-const run1 = () => {
+$("#orderForm").submit(function(e) {
+    e.preventDefault();
+    
     const order_list = document.getElementById('itemList').getElementsByTagName('li')
     let menuData = []
     for(order of order_list){
@@ -41,9 +43,14 @@ const run1 = () => {
             socket.emit('newOrder')
         })
 
+        location.href = '../index.html';
 
     }else {
         console.log("cart is empty")
     }
+});
 
-}
+// const run1 = (event) => {
+
+
+// }

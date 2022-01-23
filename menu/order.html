@@ -157,7 +157,7 @@
                                             <!-- Forward Button -->
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <button type="button" name="forward" class="btn-form-func forward" onclick="run1()">
+                                                    <button type="button" name="forward" class="btn-form-func forward">
                                                         <span class="btn-form-func-content">注文を続ける</span>
                                                         <span class="icon"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
                                                     </button>
@@ -183,14 +183,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                            <label for="messageOnlinePayment">Message</label>
-                                                            <input id="messageOnlinePayment" class="form-control" name="message" type="text" data-parsley-pattern="^[a-zA-Z0-9\s.:,!?']+$" />
-                                                        </div>
-                                                    </div>
-                                                </div>
                                                 <div class="row total-container">
                                                     <div class="col-md-12 p-0">
                                                         <span class="totalTitle">合計</span><span class="totalValue format-price float-right">¥0</span>
@@ -204,6 +196,7 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <button type="submit" name="submitOrder" id="" class="btn-form-func" onclick="run()">
+                                                            <!-- <span class="btn-form-func-content" onclick="run1(e)">Submit</span> -->
                                                             <span class="btn-form-func-content">Submit</span>
                                                             <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
                                                         </button>
